@@ -1,0 +1,26 @@
+1.List app Users
+
+URL: /users
+Method: GET
+Description: Retrieves a list of users, with an option to filter by username.
+
+
+2.Replace some User fields at once
+
+URL: /users
+Method: PUT
+Description: Updates all fields of a user at once.
+
+
+3.Create some Client
+
+URL: /clients
+Method: POST
+Description: Creates a new client, ensuring that a company does not already have a client.
+
+
+4.Change any Client field
+
+URL: /clients/<client_id>
+Method: PATCH
+Description: Updates any single or multiple fields of a client.
