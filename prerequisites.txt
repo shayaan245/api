@@ -1,0 +1,33 @@
+Python: Install Python from the official website: https://www.python.org/downloads/
+
+Flask: Flask is a micro web framework for Python. Install it using pip, Python's package installer. Run the following command in your CLI:
+
+
+pip install Flask
+Flask SQLAlchemy: Flask SQLAlchemy is an extension for Flask that adds support for SQLAlchemy, a SQL toolkit and Object-Relational Mapping (ORM) library for Python. Install it using pip:
+
+
+pip install Flask-SQLAlchemy
+pytest: pytest is a testing framework for Python. Install it using pip:
+
+pip install pytest
+Running the Code:
+Save the Code: Copy the provided Python code and save it to a file named app.py.
+
+Initialize Git Repository (Optional): If you want to push your code to GitHub, navigate to the directory containing app.py in your CLI and initialize a Git repository using:
+
+csharp
+git init
+Add and Commit Changes (Optional): Add app.py to the repository and commit changes:
+
+sql
+git add app.py
+git commit -m "Initial commit"
+Run the Flask Application: Execute the following command to run the Flask application:
+
+python app.py
+Access the API: Once the Flask application is running, you can access the API endpoints using a web browser or a tool like cURL or Postman. By default, the server will be accessible at http://127.0.0.1:5000/.
+
+Run Unit Tests: To run the unit tests, execute the following command in the same directory as app.py:
+
+pytest
