@@ -1,0 +1,34 @@
+CREATE TABLE user (
+    id INTEGER PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL
+);
+
+CREATE TABLE company (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(100) UNIQUE NOT NULL,
+    employees INTEGER,
+    FOREIGN KEY (id) REFERENCES user (id)
+);
+
+CREATE TABLE client (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    user_id INTEGER NOT NULL,
+    company_id INTEGER NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (company_id) REFERENCES company (id)
+);
+
+CREATE TABLE client_user (
+    id INTEGER PRIMARY KEY,
+    client_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME,
+    deleted_at DATETIME,
+    active BOOLEAN DEFAULT 1,
+    FOREIGN KEY (client_id) REFERENCES client (id),
+    FOREIGN KEY (user_id) REFERENCES user (id)
+);
